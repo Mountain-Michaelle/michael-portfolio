@@ -1,0 +1,145 @@
+@import '../CSS/Responsive.scss';
+
+
+.home{
+    height: 700px;
+    background: black;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+    overflow: auto;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include medium{
+        height: 1100px;
+        overflow: auto;
+    }
+
+        .home-section{
+            h2{
+                padding: 0.5rem 0 0.5rem 0;
+            }
+            .h2{
+                color: rgb(229 174 255);
+            }
+            .MuiBox-root{
+                display: flex;
+                justify-content: center;
+                flex-flow: wrap row;
+
+            @include medium{
+                flex-flow: wrap row;
+            }
+
+            .MuiGrid-root{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.1rem;
+                width: 170px;
+
+                .item{
+                    padding: 0.1rem;
+                }
+            }
+        }
+    }
+    
+    .service-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+
+        h2{
+            padding: 0.5rem 0 0.5rem 0;
+        }
+        .h2{
+            color: rgb(229 174 255);
+        }
+        .MuiBox-root{
+            display: flex;
+            justify-content: center;
+            
+
+            @include medium{
+                flex-flow: wrap row;
+                
+                .boxes{
+                    height: 200px;
+                }
+            }
+
+            .boxes{
+            background: white;
+            position: relative;
+            margin: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+
+            .txt{
+                position: absolute;
+                background: #3902398c;
+                padding: 20px;
+                font-weight: 600;
+                color: white;
+                font-size: 1.3rem;
+            }
+            @include small{
+                width: 90%;
+            }
+
+            img{
+                width: 80%;
+                object-fit: cover;
+
+                @include small{
+                    width: 100%;
+                }
+            }
+        }
+        }
+      
+    }
+}
+
+@include small{
+.home{
+    height: 1150px;
+    overflow: auto;
+    
+    .home-section{
+        .MuiBox-root{
+            flex-flow: wrap row;
+            justify-content: center;    
+
+            .MuiGrid-root{
+                width: 50px;
+                overflow: hidden;
+                gap: 0.5rem;
+                justify-content: center;
+                padding: 0.5rem;
+
+                .items{
+                    color: red;   
+                }
+                .name{
+                    display: none
+                }
+
+                
+            }
+        }
+    }
+}
+}

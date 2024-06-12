@@ -1,0 +1,44 @@
+@import '../CSS/Responsive.scss';
+
+.social{
+   
+    .social-icon{
+        padding: 3rem;
+
+        @include small{
+            padding: 1rem;
+        }
+        .MuiSvgIcon-root{
+            font-size: 1.8rem;
+           &:hover{
+            transform: scale(1.2);
+            transition: all 0.5s;
+            cursor: pointer;
+
+        } 
+        }
+    } 
+    .whatsapp{
+        .MuiSvgIcon-root{
+            color: #00ff00;
+        }
+}
+
+.linkedln{
+    .MuiSvgIcon-root{
+        color: #9fc7ff;
+    }
+}
+
+}
+
+@include small{
+    .social{
+
+        .social-icon{
+            .MuiSvgIcon-root{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

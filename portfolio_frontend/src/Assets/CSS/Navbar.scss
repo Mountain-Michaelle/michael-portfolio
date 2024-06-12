@@ -1,0 +1,107 @@
+@import '../CSS/Responsive.scss';
+
+.nav{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 20px 0 20px;
+    box-shadow: 2px 0px 12px rgba($color: #000000, $alpha: 1.0);
+    position: relative;
+    z-index: 99999;
+
+    .nav-header{
+        display: flex;
+        height: 100%;
+        margin-top: 2rem;
+        
+        &:hover{
+            cursor: pointer;
+        }
+
+        div{
+            font-size: bold;
+            z-index: 100;
+            width: 100%;
+            span{
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+    .nav-items{
+        display: flex;
+        gap: 1rem;
+        margin-top: 3rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        @include medium{
+            display: none;
+        }
+    }
+
+    .menu-icon{
+        display: none;
+
+        @include medium{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+           .MuiSvgIcon-root{
+            font-size: 1.8rem;
+            &:hover{
+                font-size: 2rem;
+                cursor: pointer;
+                transition: all .4s;
+            }
+           }
+        }
+    }
+
+
+}
+    .menu{
+       display: flex;
+       flex-direction: column;
+       background: rgb(52, 1, 64);
+       color: white !important;
+       height: 120px;
+       position: absolute;
+       width: 100%;
+       bottom: 0%;
+       left: 0;
+       right: 0;
+       transition: all .3s;
+       gap: 1rem;
+       padding: 15px;
+       transform: translateY(100%);
+       z-index: 10;
+    }
+
+    
+    .deactivate{
+        position: absolute;
+        background: rgb(120, 3, 3);
+        top: -300%;
+        z-index: 0;
+        transition: all .4s;
+        transform: translateY(-100%);
+        
+    }
+
+    @media screen and (min-width: 901px){
+        .off{
+            position: absolute;
+            background: rgb(120, 3, 3);
+            top: -300%;
+            z-index: 0;
+            transition: all .4s;
+            transform: translateY(-100%);
+        }
+    }

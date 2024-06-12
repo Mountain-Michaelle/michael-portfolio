@@ -1,0 +1,102 @@
+@import '../CSS//Responsive.scss';
+
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../Statics/Images/headerImg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+
+    .my{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+
+        .circle{
+            width: 270px;
+            height: 270px;
+            background: red;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img{
+                width: 280px;
+                object-fit: cover;;
+            }
+        }
+
+        .my-profile{
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+
+            h1{
+                text-align: center;
+                color: white;
+                text-shadow: -5px -3px 0px #013018c7;
+                padding: 5px 5px 10px 5px;
+            }
+
+            .bg{
+                background: linear-gradient(to bottom, #0e3c38, #ffaeae);
+                height: 40px;
+
+                .txt{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Typewriter{
+                         .Typewriter__wrapper{
+                        font-size: 25px;
+                        font-weight: 500;
+                        margin-top: 1.3rem;
+                        text-align: center;
+                        color: #f5f0b4;
+                    }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+
+@include medium{
+    .header{
+        height: 550px;
+
+        .my{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .circle{
+                width: 300px;
+                height: 300px;
+
+                img{
+                    width: 320px;
+                }
+            }
+        }
+    }
+}
+
+@include small{
+    .my-profile{
+        gap: 1rem;
+
+        h1{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    }
+}
