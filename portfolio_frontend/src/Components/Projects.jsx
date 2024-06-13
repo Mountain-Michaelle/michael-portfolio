@@ -2,6 +2,8 @@ import { Button } from '@mui/material'
 import React from 'react'
 import '../Assets/CSS/Project.scss';
 import project from '../Assets/Statics/Images/bricks.png';
+import Blog from '../Assets/Statics/Images/Projects/blog.jpeg';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   return (
@@ -9,11 +11,14 @@ const Projects = () => {
     backgroundRepeat:'no-repeat'}}>
         <div className='card-container'>
         <div className='card'>
-            <img src='' alt='' />
-            <span className='title'>Title Site Page</span>
+            <img src={Blog} alt='' />
+
+            <span className='title'>Django/React Blog</span>
 
             <div className='btn'>
-                <Button variant='outlined' color='warning'>Visit Site</Button>
+                <Button variant='outlined' color='warning'><Link style={{fontSize:'0.8rem'}} to='https://nfcsstaugustineimt.onrender.com/' target='_blank'
+                rel='noopener noreferer'
+                >Visit web site</Link> </Button>
             </div>
         </div>
 
