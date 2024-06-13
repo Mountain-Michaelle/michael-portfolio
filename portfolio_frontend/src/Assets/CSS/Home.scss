@@ -14,8 +14,7 @@
     }
 
     @include medium{
-        height: 1100px;
-        overflow: auto;
+        height: 1400px;
     }
 
         .home-section{
@@ -115,8 +114,7 @@
 
 @include small{
 .home{
-    height: 1150px;
-    overflow: auto;
+    height: 1190px;
     
     .home-section{
         .MuiBox-root{

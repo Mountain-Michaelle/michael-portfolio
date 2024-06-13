@@ -13,8 +13,11 @@ const Navbar = () => {
   const handleOpen = () => {
     setIsOpen(!isOpen)
   }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
   return (
-    <>
      <div className='nav'>
         <div className='nav-header'>
             <div>
@@ -39,15 +42,14 @@ const Navbar = () => {
         </div>
 
         <div className={`${isOpen ? 'menu active off': 'deactivate menu'}`} style={{color:'white'}}>
-          <Link style={{color:'white'}} to='/projects'>Projects</Link>
+          <Link style={{color:'white'}} to='/my-projects'>Projects</Link>
           <Link style={{color:'white'}} to='/resume'>Resume</Link> 
+
+          <div className={isOpen ? 'blank' : ''} onClick={handleClose}> </div>
         </div>
     
     </div>
    
-    </>
-   
   )
 }
-
 export default Navbar;
