@@ -1,10 +1,12 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import '../Assets/CSS/Project.scss';
+import project from '../Assets/Statics/Images/bricks.png';
 
 const Projects = () => {
   return (
-    <div className='project'>
+    <div className='project' style={{background:'rgb(16 0 16)', backgroundImage: `url(${project})`, backgroundSize:'cover', 
+    backgroundRepeat:'no-repeat'}}>
         <div className='card-container'>
         <div className='card'>
             <img src='' alt='' />
