@@ -6,11 +6,13 @@ import { Route, Routes } from 'react-router-dom';
 import HomeComp from './Components/HomeComp';
 import Resume from './Components/Resume';
 import Projects from './Components/Projects';
+import Whatsapp from './Components/Whatsapp';
 
 function App() {
   return (
   <div className="App">
      <Navbar />
+     <Whatsapp />
       <Routes>
         <Route path='/' element={<HomeComp />} />
         <Route path='/resume' element={<Resume />} />

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Page, Text, View, Document, StyleSheet} from '@react-pdf/renderer'
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
+import {pdfjs } from 'react-pdf';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 

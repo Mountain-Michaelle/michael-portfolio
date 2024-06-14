@@ -55,3 +55,9 @@
 .rpv-core__viewer::-webkit-scrollbar{
   display: none !important;
 }
+
+.styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L{
+  color: black;
+  font-weight: 650;
+  color: rgb(125, 121, 121);
+}

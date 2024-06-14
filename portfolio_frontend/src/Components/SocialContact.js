@@ -16,10 +16,6 @@ const SocialContact = () => {
             <LinkedInIcon />
         </span>
 
-        <span className='social-icon whatsapp'>
-            <WhatsAppIcon />
-        </span>
-
         <span className='social-icon twitter'>
             <XIcon />
         </span>
