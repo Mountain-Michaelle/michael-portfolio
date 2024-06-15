@@ -10,7 +10,7 @@ const SocialContact = () => {
   return (
     <div className='social'>
         <span className='social-icon github'>
-           <Link to='https://github.com/Mountain-Michaelle' target='_blank'><GitHubIcon /></Link> 
+           <Link to='https://github.com/Mountain-Michaelle' target='_blank' style={{color:'white'}}><GitHubIcon /></Link> 
         </span>
         
         <span className='social-icon linkedln'>
@@ -18,10 +18,11 @@ const SocialContact = () => {
         </span>
 
         <span className='social-icon twitter'>
-          <Link to='https://x.com/Mountin_Michael' target='_blank'><XIcon /></Link> 
+          <Link to='https://x.com/Mountin_Michael' target='_blank' style={{color:'white'}}><XIcon /></Link> 
         </span>
     </div>
   )
 }
+
 
 export default SocialContact

@@ -4,7 +4,7 @@ import lets from '../Assets/Statics/Images/lets.png';
 import { Box, Button, Modal, Typography } from '@mui/material';
 import SocialContact from './SocialContact';
 import Message from './Message';
-
+import Copyright from './CopyWrite';
 const Footer = () => {
 
   const [isOpen, setIsOpen] = useState(false)
@@ -45,6 +45,7 @@ const Footer = () => {
           </Box>
          
         </div>
+        <Copyright />
     </div>
   )
 }

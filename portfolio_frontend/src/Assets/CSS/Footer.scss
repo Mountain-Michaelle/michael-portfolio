@@ -14,6 +14,7 @@
     background-color: #140014;
     color: white;
     overflow: hidden;
+    position: relative;
 
     @include medium{
         flex-direction: column;
