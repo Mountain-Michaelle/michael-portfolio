@@ -4,66 +4,35 @@ import '../Assets/CSS/Project.scss';
 import project from '../Assets/Statics/Images/bricks.png';
 import Blog from '../Assets/Statics/Images/Projects/blog.jpeg';
 import { Link } from 'react-router-dom';
+import projects from '../Assets/Statics/projects';
 
 const Projects = () => {
   return (
     <div className='project' style={{background:'rgb(16 0 16)', backgroundImage: `url(${project})`, backgroundSize:'cover', 
-    backgroundRepeat:'no-repeat'}}>
+            backgroundRepeat:'no-repeat'}}> 
         <div className='card-container'>
-        <div className='card'>
-            <img src={Blog} alt='' />
-
-            <span className='title'>Django/React Blog</span>
-
-            <div className='btn'>
-                <Button variant='outlined' color='warning'><Link style={{fontSize:'0.8rem'}} to='https://nfcsstaugustineimt.onrender.com/' target='_blank'
-                rel='noopener noreferer'
-                >Visit web site</Link> </Button>
-            </div>
-        </div>
-
-        {/** 2nd Card */}
-        <div className='card'>
-            <img src='' alt='' />
-            <span className='title'>Title Site Page</span>
-
-            <div className='btn'>
-                <Button variant='outlined' color='warning'>Visit Site</Button>
-            </div>
-        </div>
-
-        {/** 3rd Card */}
-        <div className='card'>
-            <img src='' alt='' />
-            <span className='title'>Title Site Page</span>
-
-            <div className='btn'>
-                <Button variant='outlined' color='warning'>Visit Site</Button>
-            </div>
-        </div>
-
-        {/** 4th Card */}
-        <div className='card'>
-            <img src='' alt='' />
-            <span className='title'>Title Site Page</span>
-
-            <div className='btn'>
-                <Button variant='outlined' color='warning'>Visit Site</Button>
-            </div>
-        </div>
+        {
+            projects.map((project, index) => {
+                return(
+                    <div className='card'>
+                        <img src={project.image} alt='' />
         
+                        <span className='title'>{project.proj_name}</span>
+        
+                        <div className='btn'>
+                            <Button sx={{color:'white'}} variant='outlined' ><Link style={{fontSize:'0.8rem'}} to={project.url} target='_blank'
+                            rel='noopener noreferer'
+                            >Visit web site</Link> </Button>
 
-        {/** 5th Card */
-         <div className='card'>
-         <img src='' alt='' />
-         <span className='title'>Title Site Page</span>
-
-         <div className='btn'>
-             <Button variant='outlined' color='warning'>Visit Site</Button>
-         </div>
-     </div>}
-
-        </div>
+                            <Button sx={{color:'white'}} variant='outlined' ><Link style={{fontSize:'0.8rem'}} to={project.git_url} target='_blank'
+                            rel='noopener noreferer'>Git Repo</Link> </Button>
+                        </div>
+                        
+                    </div>
+                )
+            })
+        }
+     </div>
     </div>
   )
 }

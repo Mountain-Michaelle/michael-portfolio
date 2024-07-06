@@ -49,6 +49,15 @@
             right: 5%;
             top: 30%;
             width: 50%;
+
+            .MuiButtonBase-root{
+                background-color: #2e1038;
+                color: white !important;
+
+                a{
+                    color: white;
+                }
+            }
         }
     }
     }
