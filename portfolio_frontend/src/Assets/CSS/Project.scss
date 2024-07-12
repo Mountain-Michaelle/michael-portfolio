@@ -1,3 +1,6 @@
+@import '../CSS/Responsive.scss';
+
+
 .project{
     width: 100%;
     display: flex;
@@ -20,6 +23,15 @@
         transition: all 0.4s;
         overflow: hidden;
         position: relative;
+
+        @include small{
+        width: 90%;
+            &:hover{
+                transform: scale(0);
+                width: 95% !important;
+                margin: 0 auto;
+            }
+        }
 
         &:hover{
             transform: scale(1.2);
@@ -59,6 +71,7 @@
                 }
             }
         }
+
     }
     }
    

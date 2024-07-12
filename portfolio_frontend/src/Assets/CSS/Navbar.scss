@@ -12,8 +12,7 @@
 
     .nav-header{
         display: flex;
-        height: 100%;
-        margin-top: 2rem;
+        margin-top: 1.3rem;
         
         &:hover{
             cursor: pointer;
@@ -23,9 +22,19 @@
             font-size: bold;
             z-index: 100;
             width: 100%;
+            overflow: hidden;
             span{
                 img{
                     width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                }
+            }
+            strong{
+                margin-bottom: 3rem;
+                @include small{
+                    font-weight: 800;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -43,6 +52,7 @@
         @include medium{
             display: none;
         }
+
     }
 
     .menu-icon{
@@ -78,7 +88,7 @@
        right: 0;
        transition: all .3s;
        gap: 1rem;
-       padding: 15px;
+       padding: 20px;
        transform: translateY(100%);
        z-index: 10;
 

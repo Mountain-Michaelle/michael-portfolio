@@ -10,6 +10,29 @@
     background-size: cover;
     height: 350px;
     width: 100%;
+    overflow: hidden;
+
+
+    @include medium{
+    background-image: url('../Statics/Images/DeBees.png');
+    background-position: center;
+    background-clip: unset;
+
+    .my{
+
+        .circle{
+            box-shadow: 3px 7px 6px 0px #890000;
+        }
+        .my-profile{
+                h1{
+                    color: white !important;
+                    text-shadow: 3px 0px 0px rgb(193 0 0 / 78%) !important;
+                    font-size: 1.7rem !important;
+                    line-height: 2rem;
+                }
+            }
+    }
+    }
 
     .my{
         display: flex;

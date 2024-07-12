@@ -24,8 +24,10 @@ const Navbar = () => {
                 <Link to='/'>
                     <span>
                    <img src={Bees} alt='DeBees' /> 
-                </span>
-                   De Bees 
+                  </span>
+                  <strong>
+                     De Bees 
+                  </strong>
                 </Link>
               
                 
@@ -33,7 +35,7 @@ const Navbar = () => {
         </div>
 
         <div className='nav-items'>
-            <Link to='/my-projects'>Projects</Link>
+            <Link to='/my-projects'>Personal Projects</Link>
             <Link to='/resume'>Resume</Link> 
         </div>
 
@@ -42,7 +44,7 @@ const Navbar = () => {
         </div>
 
         <div className={`${isOpen ? 'menu active off': 'deactivate menu'}`} style={{color:'white'}}>
-          <Link style={{color:'white'}} to='/my-projects'>Projects</Link>
+          <Link style={{color:'white'}} to='/my-projects'>Personal Projects</Link>
           <Link style={{color:'white'}} to='/resume'>Resume</Link> 
 
           <div className={isOpen ? 'blank' : ''} onClick={handleClose}> </div>

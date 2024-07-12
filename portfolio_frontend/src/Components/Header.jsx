@@ -12,7 +12,7 @@ const Header = () => {
         <div className='my'>
 
         <div className='circle'>
-            <img src={my} alt='' />
+            <img src={my} alt='Profile Picture' />
         </div>
         
         <div className='my-profile'>

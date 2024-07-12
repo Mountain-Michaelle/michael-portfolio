@@ -9,8 +9,8 @@ const Whatsapp = () => {
         <div className='whatsapp' style={{}}>
             <FloatingWhatsApp
             phoneNumber='+23409156084052'
-            chatMessage="Welcome! How can we help you today? 🌟"
-            statusMessage='De Bees'
+            chatMessage="Welcome, It's my pleasure hearing from you!🌟"
+            statusMessage='De Bees will reply in less than 1hr'
             accountName='Michael Chinemelu'
             allowEsc
             allowClickAway
