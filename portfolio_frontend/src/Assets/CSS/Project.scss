@@ -27,15 +27,13 @@
         @include small{
         width: 90%;
             &:hover{
-                transform: scale(0);
                 width: 95% !important;
                 margin: 0 auto;
             }
         }
 
         &:hover{
-            transform: scale(1.2);
-            z-index: 9999;
+            z-index: 0;
             width: 320px;
         }
 
@@ -72,6 +70,12 @@
             }
         }
 
+        .alert{
+            position: absolute;
+            z-index: 999999;
+            width: 3009px;
+            background: red;
+        }
     }
     }
    
