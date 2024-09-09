@@ -29,20 +29,22 @@ export default function Message({isOpen, isClose}) {
   const [error, setError] = useState('')
 
   const initialValues = {
-    full_name: '',
+    name: '',
     email: '',
     phone: '',
     message: '',
+    subject: 'From Your profile site',
   }
 
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 
   const validationSchema = Yup.object({
-      full_name: Yup.string().required("Please provide your full name").min(3, "Name must be more than three"),
+      name: Yup.string().required("Please provide your full name").min(3, "Name must be more than three"),
       email: Yup.string().required("Please provide a valid email").email("Invalid email"),
       phone: Yup.string().required("Please provide you phone number").matches(phoneRegExp, "Invalid phone"),
-      message: Yup.string().required("Please add a message").max(150, "Message length too much")
+      message: Yup.string().required("Please add a message").max(150, "Message length too much"),
+      subject: Yup.string().required("Please add a message").max(150, "Message length too much")
   })
 
   const BASE_URL = 'http://127.0.0.1:8000'
@@ -61,21 +63,23 @@ export default function Message({isOpen, isClose}) {
     validationSchema,
 
     onSubmit : async (values, {resetForm}) => {
-      const {full_name, email, phone, message} = values
+      const {name, email, phone, message, subject} = values
 
-      const body = JSON.stringify({full_name, email, phone, message})
+      const body = JSON.stringify({name, email, phone, message, subject})
 
       setLoading(true)
       try{
-        await axios.post(`${BASE_URL}`, body, config)
+        await axios.post('https://re-estate-backend.vercel.app/contacts/', body, config)
         .then(res => {
           setSuccess(true)
           setLoading(false)
+          setError('')
           resetForm()
         })
         .catch(error => {
         setError(error?.response?.data)
           setLoading(false)
+          setSuccess(false)
         })
     }
     catch(error){
@@ -84,7 +88,7 @@ export default function Message({isOpen, isClose}) {
   }
 })
 
-  const {full_name, email, phone, message} = formik.values
+  const {name, email, phone, message} = formik.values
 
   console.log(error)
 
@@ -109,25 +113,33 @@ export default function Message({isOpen, isClose}) {
           }}
         >
         <Typography variant='h5' style={{padding: '1rem', textAlign:'center'}}> Contact Me </Typography>
-        <Typography variant='h5' style={{padding: '1rem', textAlign:'center'}}>{error ? <p>Network error..., check your connection</p> : ''}</Typography>
-
+        {
+          loading ? 
+          ''
+          :
+          <>
+            {success ? <Typography variant='h5' style={{padding: '1rem', textAlign:'center', color:'#28a528', fontSize:'1.1rem'}}> <p>Message sent! Thank You for Contacting. <br/>  <small style={{color:'orange'}}>Click outside to exit</small></p> </Typography> : ''}
+            {error ?<Typography variant='h5' component='h5' style={{padding: '1rem', textAlign:'center', color:"#ff3636"}}> <p>Network Error!</p></Typography> : '' }
+          </>
+        
+        }
           <Box component="form" noValidate onSubmit={formik.handleSubmit} sx={{display: 'flex', flexDirection:'column', gap:'1rem' }}>
             <Grid container spacing={2} sx={{}}>
               <Grid item xs={12} sm={12}>
                 <TextField
                     sx={{color: 'white'}}
                   autoComplete="given-name"
-                  name="full_name"
+                  name="name"
                   required
                   fullWidth
-                  id="full_name"
+                  id="name"
                   label="Full Name"
                   autoFocus
                   color='warning'
-                  {...formik.getFieldProps('full_name')}
-                  value={full_name}
-                   helperText={formik.errors.full_name && formik.touched.full_name ? formik.errors.full_name : ''}
-                  error={formik.errors.full_name && formik.touched.full_name ? formik.errors : ''}
+                  {...formik.getFieldProps('name')}
+                  value={name}
+                   helperText={formik.errors.name && formik.touched.name ? formik.errors.name : ''}
+                  error={formik.errors.name && formik.touched.name ? formik.errors : ''}
                   size='small'
                 />
               </Grid>

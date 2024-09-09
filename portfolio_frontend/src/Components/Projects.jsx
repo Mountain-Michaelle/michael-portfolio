@@ -1,13 +1,13 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
 import React, { useState } from 'react'
 import '../Assets/CSS/Project.scss';
-import project from '../Assets/Statics/Images/bricks.png';
+import project from '../Assets/Statics/Images/code.png';
 import Blog from '../Assets/Statics/Images/Projects/blog.jpeg';
 import { Link, useNavigate} from 'react-router-dom';
 import projects from '../Assets/Statics/projects';
 import { SettingsInputComponentOutlined } from '@mui/icons-material';
 import WarningIcon from '@mui/icons-material/Warning';
-
+import MediaCard from  './Card'
 const Projects = () => {
 
     const navigate = useNavigate();
@@ -34,21 +34,22 @@ const Projects = () => {
         {
             projects.map((project, index) => {
                 return(
-                    <div className='card'>
-                        <img src={project.image} alt='' />
+                    <MediaCard data={project} handleToggle={handleToggle} link={link} />
+                    // <div className='card'>
+                    //     <img src={project.image} alt='' />
         
-                        <span className='title'>{project.proj_name}</span>
+                    //     <span className='title'>{project.proj_name}</span>
         
-                        <div className='btn'>
-                            <Button onClick={() => handleToggle(project.url)} sx={{color:'white'}} variant='outlined' >
-                                Visit Site
-                             </Button>
+                    //     <div className='btn'>
+                    //         <Button onClick={() => handleToggle(project.url)} sx={{color:'white'}} variant='outlined' >
+                    //             Visit Site
+                    //          </Button>
                             
-                            <Button sx={{color:'white'}} variant='outlined' ><Link style={{fontSize:'0.8rem'}} to={project.git_url} target='_blank'
-                            rel='noopener noreferer'>Git Repo</Link> </Button>
-                        </div> 
+                    //         <Button sx={{color:'white'}} variant='outlined' ><Link style={{fontSize:'0.8rem'}} to={project.git_url} target='_blank'
+                    //         rel='noopener noreferer'>Git Repo</Link> </Button>
+                    //     </div> 
                         
-                    </div>
+                    // </div>
                 )
             })
         }
@@ -58,7 +59,7 @@ const Projects = () => {
             <WarningIcon color='error' fontSize='large' />
             </DialogTitle>
 
-            <DialogContent sx={{zIndex:'999999999'}}>
+            <DialogContent>
                 <DialogContentText sx={{textAlign: 'center'}}>
                 The site you're about to visit is in Demo Mode and may experience slow loading due to limited CPU resources. 
                
