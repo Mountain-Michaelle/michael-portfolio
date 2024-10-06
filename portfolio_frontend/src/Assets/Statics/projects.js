@@ -23,7 +23,7 @@ export default [
         description: 'Developed with Django-Restframework, React and Redux',
         image: Ecom,
         url: 'https://ecommerce-app-two-umber.vercel.app/',
-        git_url: 'https://github.com/Mountain-Michaelle/ReEstateBackend',
+        git_url: 'https://github.com/Mountain-Michaelle/ecommerce_app',
     }, 
     {
         proj_name: 'Blog (Django Stand Alone)',
