@@ -15,9 +15,9 @@ const Home = () => {
           <h2 className="h2">Brief Bio</h2>
           <Box sx={{ padding:'0.5rem', textAlign:'justify'}}>
             <Typography component='h2' variant='body2' >
-                Am <b style={{color:'rgb(223 255 3)', textTransform:'uppercase', }}>Michael Chinemelu Ugwu,</b>  hailing from Enugu State, Nigeria, I'm a dedicated Computer Scientist.
-                I completed my secondary education at <b style={{color:'#c3ff00'}}>Nsukka High School</b>  and later
-                graduated from the, <b style={{color:'#c3ff00'}}> University of Nigeria Nsukka, </b> with a degree in Computer Science.
+                Am <b style={{color:'rgb(255 113 69)', textTransform:'uppercase', }}>Michael Chinemelu Ugwu,</b> a dedicated Computer Scientist.
+                I completed my secondary education at <b style={{color:'rgb(255 113 69)'}}>Nsukka High School</b>  and later
+                graduated from the, <b style={{color:'rgb(255 113 69)'}}> University of Nigeria Nsukka, </b> with a degree in Computer Science.
                 Am passionate about technology and its applications in solving real-world problems.
             </Typography>
           </Box>

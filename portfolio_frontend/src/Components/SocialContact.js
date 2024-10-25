@@ -10,15 +10,15 @@ const SocialContact = () => {
   return (
     <div className='social'>
         <span className='social-icon github'>
-           <Link to='https://github.com/Mountain-Michaelle' target='_blank' style={{color:'white'}}><GitHubIcon /></Link> 
+           <Link to='https://github.com/Mountain-Michaelle' target='_blank' style={{color:'#ff3c00'}}><GitHubIcon /></Link> 
         </span>
         
         <span className='social-icon linkedln'>
-            <LinkedInIcon />
+            <Link to='https://github.com/Mountain-Michaelle' target='_blank' style={{color:'#ff3c00'}}> <LinkedInIcon /></Link>
         </span>
 
         <span className='social-icon twitter'>
-          <Link to='https://x.com/Mountin_Michael' target='_blank' style={{color:'white'}}><XIcon /></Link> 
+          <Link to='https://x.com/Mountin_Michael' target='_blank' style={{color:'#ff3c00'}}><XIcon /></Link> 
         </span>
     </div>
   )

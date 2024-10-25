@@ -21,13 +21,13 @@ const Footer = () => {
     <div className='footer' style={{position: 'relative'}}>
         <div className='left'>
           <Box sx={{width: '100%', }}>
-          <Typography variant='h5'>Contact me let's talk!</Typography>
+          <Typography variant='h5'>E-mail, let's talk!</Typography>
             <Button onClick={handleIsOpen} variant='outlined' color='warning' sx={{margin:"10px"}}>Message Me</Button>
             <Message isOpen={isOpen} isClose={handleClose} />
           </Box>
 
           <Box sx={{width:'100%', display: 'flex', flexDirection:'column', gap:'1rem'}}>
-            <Typography variant='h6'>Social Handles</Typography>
+            {/* <Typography variant='h6'>Social Handles</Typography> */}
               <div style={{display: 'flex', flexFlow: 'wrap row', justifyContent: 'center'}} className='align-social'>
                 <SocialContact  />
               </div>

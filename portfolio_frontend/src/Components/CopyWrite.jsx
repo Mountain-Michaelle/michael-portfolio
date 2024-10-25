@@ -12,7 +12,8 @@
           <Link color="inherit" href="https://mui.com/" style={{color: 'orange', fontSize:'0.8rem'}}>
             https://michael-portfolio-flax.vercel.app/
           </Link>{' '}
-          {new Date().getFullYear()}
+          {/* {new Date().getFullYear()}
+           */}2023
           {'.'}
         </Typography>
       );

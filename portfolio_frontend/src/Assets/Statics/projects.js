@@ -10,20 +10,19 @@ import Ecom from './Images/Ecom.png'
 
 
 export default [
-  
-    {
-        proj_name: 'Real Estate App',
-        description: 'This app is developed with Django-Restframework, React and Redux',
-        image: Estate,
-        url: 'https://re-estate-backend.vercel.app/',
-        git_url: 'https://github.com/Mountain-Michaelle/ReEstateBackend',
-    }, 
     {
         proj_name: 'E-Commerce App',
         description: 'Developed with Django-Restframework, React and Redux',
         image: Ecom,
         url: 'https://ecommerce-app-two-umber.vercel.app/',
         git_url: 'https://github.com/Mountain-Michaelle/ecommerce_app',
+    }, 
+    {
+        proj_name: 'Real Estate App',
+        description: 'This app is developed with Django-Restframework, React and Redux',
+        image: Estate,
+        url: 'https://re-estate-backend.vercel.app/',
+        git_url: 'https://github.com/Mountain-Michaelle/ReEstateBackend',
     }, 
     {
         proj_name: 'Blog (Django Stand Alone)',
@@ -33,7 +32,7 @@ export default [
         git_url: 'https://github.com/Mountain-Michaelle/Django_Core_Blog',
     },
     {
-        proj_name: 'Learning Tracker (Django Stand Alone)',
+        proj_name: 'Learning Tracker (CRUD)',
         description: 'This app is developed with Django alone. It demostrates the real world look and logics of a Learning Tracker',
         image: Tracker,
         url: 'https://learning-tracker.vercel.app/',

@@ -5,28 +5,29 @@
     position: relative;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../Statics/Images/headerImg.webp');
+    background-image: url('../Statics/Images/headerImg.png');
+    background-color: #140014;
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
     width: 100%;
+    background: puple;
     overflow: hidden;
 
 
     @include medium{
-    background-image: url('../Statics/Images/DeBees.png');
     background-position: center;
     background-clip: unset;
 
     .my{
 
         .circle{
-            box-shadow: 3px 7px 6px 0px #890000;
+            box-shadow: 1px 4px 10px 0px #0b0012    
         }
         .my-profile{
                 h1{
-                    color: white !important;
-                    text-shadow: 3px 0px 0px rgb(193 0 0 / 78%) !important;
+                    color: black !important;
+                    text-shadow: -1px -2px 0px #ed6c02 !important;
                     font-size: 1.7rem !important;
                     line-height: 2rem;
                 }
@@ -61,12 +62,12 @@
             h1{
                 text-align: center;
                 color: white;
-                text-shadow: -5px -3px 0px #013018c7;
+                text-shadow: 1px 2px 0px rgb(158 0 0 / 78%);
                 padding: 5px 5px 10px 5px;
             }
 
             .bg{
-                background: linear-gradient(to bottom, #0e3c38, #ffaeae);
+                background: linear-gradient(to bottom, #1f0023, #ff3c00);
                 height: 40px;
 
                 .txt{
@@ -81,7 +82,7 @@
                         font-weight: 500;
                         margin-top: 1.3rem;
                         text-align: center;
-                        color: #f5f0b4;
+                        color: #d0d0d0;
                     }
                     }
                    
@@ -102,8 +103,9 @@
             gap: 2rem;
 
             .circle{
-                width: 300px;
-                height: 300px;
+                width: 270px;
+                height: 270px;
+                margin-top: 2rem;
 
                 img{
                     width: 320px;
@@ -120,6 +122,7 @@
         h1{
             font-size: 1.3rem;
             text-align: center;
+            color: black !important;
         }
     }
 }

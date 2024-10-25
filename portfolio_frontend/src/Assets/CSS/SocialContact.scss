@@ -9,24 +9,25 @@
             padding: 1rem;
         }
         .MuiSvgIcon-root{
-            font-size: 1.8rem;
+            font-size: 2rem !important;
            &:hover{
             transform: scale(1.2);
             transition: all 0.5s;
             cursor: pointer;
+            color: #cb3204;
 
         } 
         }
     } 
     .whatsapp{
         .MuiSvgIcon-root{
-            color: #00ff00;
+            color: #ff3c00;
         }
 }
 
 .linkedln{
     .MuiSvgIcon-root{
-        color: #9fc7ff;
+        color: #ff3c00;
     }
 }
 

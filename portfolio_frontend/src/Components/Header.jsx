@@ -17,7 +17,7 @@ const Header = () => {
         
         <div className='my-profile'>
             <h1>
-                Ugwu Michael Chinemelu
+                Michael Chinemelu
             </h1>
             <div className='bg'>
                 <span className='txt'>

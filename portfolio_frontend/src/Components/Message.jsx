@@ -112,7 +112,7 @@ export default function Message({isOpen, isClose}) {
             padding: '2rem'
           }}
         >
-        <Typography variant='h5' style={{padding: '1rem', textAlign:'center'}}> Contact Me </Typography>
+        <Typography variant='h5' style={{padding: '1rem', textAlign:'center'}}>E-MAIL</Typography>
         {
           loading ? 
           ''
