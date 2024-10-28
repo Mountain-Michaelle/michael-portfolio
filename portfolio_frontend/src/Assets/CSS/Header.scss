@@ -47,6 +47,8 @@
             background: rgb(49, 0, 52);
             border-radius: 50%;
             overflow: hidden;
+            transform: scale(-80%);
+            animation: BounceDown 1.5s forwards ease-in-out;
 
             img{
                 width: 280px;
@@ -58,6 +60,9 @@
             display: flex;
             flex-direction: column;
             padding-left: 1rem;
+            transform: scaleX(-80%);
+            animation: BounceDown 1.5s forwards ease-in-out;
+
 
             h1{
                 text-align: center;
@@ -124,5 +129,16 @@
             text-align: center;
             color: black !important;
         }
+    }
+}
+
+@keyframes BounceDown{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0%, 0%);
+        opacity: 1;
     }
 }

@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../Assets/CSS/Home.scss';
 import skills from '../Assets/Statics/skills.js';
 import { Box, Grid, Typography } from '@mui/material';
 import Web from '../Assets/Statics/Images/web.png';
 import Graphics from '../Assets/Statics/Images/graphics.png';
 import Data from '../Assets/Statics/Images/Data.png';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 const Home = () => {
+ 
+  
+const container = useRef();
+  useGSAP(() => {
+      // gsap code here...
+  }, { scope: container }); // <-- scope is for selector text (optional)
 
   console.log(skills.map(item => item.Name))
   return (
