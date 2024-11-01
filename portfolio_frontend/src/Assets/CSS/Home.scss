@@ -38,9 +38,14 @@
                 align-items: center;
                 gap: 0.1rem;
                 width: 170px;
+                transform: scaleX(-100%);
+                overflow: hidden;
 
-                .item{
+
+                .items{
                     padding: 0.1rem;
+                    transition: 1s all;
+                    padding-bottom: 1.5rem;
                 }
             }
         }

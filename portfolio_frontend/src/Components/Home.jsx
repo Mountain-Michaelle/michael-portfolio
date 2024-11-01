@@ -1,29 +1,19 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import '../Assets/CSS/Home.scss';
 import skills from '../Assets/Statics/skills.js';
 import { Box, Grid, Typography } from '@mui/material';
 import Web from '../Assets/Statics/Images/web.png';
 import Graphics from '../Assets/Statics/Images/graphics.png';
 import Data from '../Assets/Statics/Images/Data.png';
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
 
 const Home = () => {
  
-  
-const container = useRef();
-  useGSAP(() => {
-      // gsap code here...
-  }, { scope: container }); // <-- scope is for selector text (optional)
-
-  console.log(skills.map(item => item.Name))
   return (
     <div className='home'>
         <div className='home-section'>
           <h2 className="h2">Brief Bio</h2>
           <Box sx={{ padding:'0.5rem', textAlign:'justify'}}>
-            <Typography component='h2' variant='body2' >
+            <Typography component='h2' variant='body2' style={{transform: 'scaleY(100%)'}} >
                 Am <b style={{color:'rgb(255 113 69)', textTransform:'uppercase', }}>Michael Chinemelu Ugwu,</b> a dedicated Computer Scientist.
                 I completed my secondary education at <b style={{color:'rgb(255 113 69)'}}>Nsukka High School</b>  and later
                 graduated from the, <b style={{color:'rgb(255 113 69)'}}> University of Nigeria Nsukka, </b> with a degree in Computer Science.

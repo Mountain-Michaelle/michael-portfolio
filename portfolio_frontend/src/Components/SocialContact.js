@@ -14,7 +14,7 @@ const SocialContact = () => {
         </span>
         
         <span className='social-icon linkedln'>
-            <Link to='https://github.com/Mountain-Michaelle' target='_blank' style={{color:'#ff3c00'}}> <LinkedInIcon /></Link>
+            <Link to='www.linkedin.com/in/michael-chinemelu-98718126b' target='_blank' style={{color:'#ff3c00'}}> <LinkedInIcon /></Link>
         </span>
 
         <span className='social-icon twitter'>
