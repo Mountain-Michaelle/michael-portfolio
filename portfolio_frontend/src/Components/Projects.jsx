@@ -7,7 +7,7 @@ import projects from '../Assets/Statics/projects';
 import WarningIcon from '@mui/icons-material/Warning';
 import MediaCard from  './Card'
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 gsap.registerPlugin(ScrollTrigger);
 

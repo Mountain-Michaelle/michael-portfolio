@@ -6,6 +6,9 @@ import Sass from '../Statics/SkillIcons/Sass.png'
 import TailWind from '../Statics/SkillIcons/TailWind.png'
 import Psd from '../Statics/SkillIcons/Psd.png'
 import Mui from '../Statics/SkillIcons/Mui.png'
+import Fastapi from '../Statics/SkillIcons/fastapi.png'
+import Typescript from '../Statics/SkillIcons/typescript.png'
+import Nextjs from '../Statics/SkillIcons/next.png'
 
 
 export default [
@@ -13,9 +16,17 @@ export default [
         Name: 'React',
         Image: React,
     },
+     {
+        Name: 'Nextjs',
+        Image: Nextjs,
+    },
     {
-        Name: 'Django',
+        Name: 'Django(DRF)',
         Image: Django,
+    },
+     {
+        Name: 'Fastapi',
+        Image: Fastapi,
     },
     {
         Name: 'Python',
@@ -24,6 +35,10 @@ export default [
     {
         Name: 'Javascript',
         Image: JavaScript,
+    },
+    {
+        Name: 'Typescript',
+        Image: Typescript,
     },
     {
         Name: 'Sass',
