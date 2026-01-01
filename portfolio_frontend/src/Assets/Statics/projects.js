@@ -10,7 +10,7 @@ import Ecom from './Images/Ecom.png'
 import FrontendAssessment from './Images/frontendassessment.png'
 
 
-export default [
+const projects =  [
     {
         proj_name: 'E-Commerce App',
         description: 'Developed with Django-Restframework, React and Redux',
@@ -86,3 +86,5 @@ export default [
         git_url: 'https://github.com/Mountain-Michaelle/NextJsApi'
     },
 ]
+
+export default projects

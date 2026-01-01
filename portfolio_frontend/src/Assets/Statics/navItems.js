@@ -1,4 +1,4 @@
-export default [
+const navItems = [
     {
         Name: 'Projects',
         link: "/projects",
@@ -13,3 +13,5 @@ export default [
     },
      
 ]
+
+export default navItems

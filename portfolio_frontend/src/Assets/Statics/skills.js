@@ -10,7 +10,7 @@ import Fastapi from '../Statics/SkillIcons/fastapi.png'
 import Typescript from '../Statics/SkillIcons/typescript.png'
 import Extjs from '../Statics/SkillIcons/xtjs.png'
 
-export default [
+const skills = [
     {
         Name: 'React',
         Image: React,
@@ -56,3 +56,5 @@ export default [
         Image: Mui,
     }
 ]
+
+export default skills 
