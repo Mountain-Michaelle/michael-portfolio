@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactPDF from '@react-pdf/renderer';
 import PDFViewer from './PDFViewer';
 import pdfUrl from '../Assets/Statics/Resume.pdf'
 import { Box, Button } from '@mui/material';

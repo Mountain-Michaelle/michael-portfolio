@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../Assets/CSS/Navbar.scss';
-import { Image } from '@mui/icons-material';
 import Bees from '../Assets/Statics/Images/Bees.png';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -35,7 +34,7 @@ const Navbar = () => {
         </div>
 
         <div className='nav-items'>
-            <Link to='/my-projects'>Personal Projects</Link>
+            <Link to='/projects'>Projects</Link>
             <Link to='/resume'>Resume</Link> 
         </div>
 
@@ -44,7 +43,7 @@ const Navbar = () => {
         </div>
 
         <div className={`${isOpen ? 'menu active off': 'deactivate menu'}`} style={{color:'white'}}>
-          <Link style={{color:'white'}} to='/my-projects'>Personal Projects</Link>
+          <Link style={{color:'white'}} to='/projects'>Projects</Link>
           <Link style={{color:'white'}} to='/resume'>Resume</Link> 
 
           <div className={isOpen ? 'blank' : ''} onClick={handleClose}> </div>

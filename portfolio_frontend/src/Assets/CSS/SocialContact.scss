@@ -4,11 +4,15 @@
    
     .social-icon{
         padding: 3rem;
+        // background: white; 
 
         @include small{
             padding: 1rem;
         }
         .MuiSvgIcon-root{
+            background: white;
+            padding: 3px; 
+            border-radius: 100%;
             font-size: 2rem !important;
            &:hover{
             transform: scale(1.2);

@@ -8,9 +8,11 @@ const Types = () => {
         options={{
             strings: [
                 "Django Developer",
-                "React Developer",
-                "NextJs Developer",
-                "Graphic Designer"
+                "Flask Developer",
+                "Automation Engineer",
+                "NextJs/React Developer",
+                "UI/UX Designer",
+                "Golang Developer"
             ],
 
             autoStart: true,

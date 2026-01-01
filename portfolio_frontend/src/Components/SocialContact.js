@@ -1,7 +1,6 @@
 import React from 'react'
 import '../Assets/CSS/SocialContact.scss';
 import XIcon from '@mui/icons-material/X';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ const SocialContact = () => {
         </span>
         
         <span className='social-icon linkedln'>
-            <Link to='www.linkedin.com/in/michael-chinemelu-98718126b' target='_blank' style={{color:'#ff3c00'}}> <LinkedInIcon /></Link>
+            <Link to='https://www.linkedin.com/in/michaelchinemeluugwu/' target='_blank' style={{color:'#ff3c00'}}> <LinkedInIcon /></Link>
         </span>
 
         <span className='social-icon twitter'>

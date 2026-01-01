@@ -2,10 +2,8 @@
 
 
 .home{
-    height: 700px;
     background: #0a000e;
     color: white;
-    overflow: hidden;
     padding: 20px;
 
     &::-webkit-scrollbar{
@@ -39,7 +37,7 @@
                 gap: 0.1rem;
                 width: 170px;
                 transform: scaleX(-100%);
-                overflow: hidden;
+                overflow: auto;
 
 
                 .items{
@@ -57,7 +55,7 @@
         width: 100%;
         justify-content: center;
         margin: 0 auto;
-
+        
         h2{
             padding: 0.5rem 0 0.5rem 0;
         }
@@ -118,7 +116,7 @@
 
 @include small{
 .home{
-    height: 1190px;
+    height: fit-content;
     
     .home-section{
         .MuiBox-root{

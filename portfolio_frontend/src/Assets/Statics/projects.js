@@ -7,6 +7,7 @@ import Tracker from './Images/Projects/tracker.png'
 import Auth from './Images/Projects/auth.png'
 import Estate from './Images/Projects/estate.png'
 import Ecom from './Images/Ecom.png'
+import FrontendAssessment from './Images/frontendassessment.png'
 
 
 export default [
@@ -22,6 +23,13 @@ export default [
         description: 'This app is developed with Django-Restframework, React and Redux',
         image: Estate,
         url: 'https://re-estate-backend.vercel.app/',
+        git_url: 'https://github.com/Mountain-Michaelle/ReEstateBackend',
+    }, 
+    {
+        proj_name: 'Frontend Crypto Convert UI',
+        description: 'This app is developed from scratch with Nextjs/Tailwindcss and Typescript',
+        image: FrontendAssessment,
+        url: 'https://frontend-assessment-tau-flax.vercel.app/',
         git_url: 'https://github.com/Mountain-Michaelle/ReEstateBackend',
     }, 
     {

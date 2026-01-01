@@ -1,16 +1,27 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from "react";
 import '../Assets/CSS/Project.scss';
 import project from '../Assets/Statics/Images/code.png';
-import Blog from '../Assets/Statics/Images/Projects/blog.jpeg';
-import { Link, useNavigate} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import projects from '../Assets/Statics/projects';
-import { SettingsInputComponentOutlined } from '@mui/icons-material';
 import WarningIcon from '@mui/icons-material/Warning';
 import MediaCard from  './Card'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 const Projects = () => {
 
-    const navigate = useNavigate();
+    const projectCardsRef = useRef([]);
+
+    const addToProjectRefs = (el) => {
+      if (el && !projectCardsRef.current.includes(el)) {
+        projectCardsRef.current.push(el);
+      }
+    }; 
+    
 
     const [isOpen, setIsOpen] = useState(false)
     const [link, setLink] = useState('')
@@ -25,35 +36,53 @@ const Projects = () => {
         setIsOpen(false)
     }
 
-    console.log("Where you ", link)
-
+    useEffect(() => {
+        projectCardsRef.current.forEach((card) => {
+          gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              scale: 0.85,
+              y: 30,
+            },
+            {
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              duration: 1.5,
+              ease: "back.out(1.6)",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
+      
+        return () => {
+          ScrollTrigger.getAll().forEach((t) => t.kill());
+        };
+      }, []);
+      
+      
   return (
     <div className='project' style={{background:'rgb(16 0 16)', backgroundImage: `url(${project})`, backgroundSize:'cover', 
             backgroundRepeat:'no-repeat'}}> 
-        <div className='card-container'>
-        {
-            projects.map((project, index) => {
-                return(
-                    <MediaCard data={project} handleToggle={handleToggle} link={link} />
-                    // <div className='card'>
-                    //     <img src={project.image} alt='' />
-        
-                    //     <span className='title'>{project.proj_name}</span>
-        
-                    //     <div className='btn'>
-                    //         <Button onClick={() => handleToggle(project.url)} sx={{color:'white'}} variant='outlined' >
-                    //             Visit Site
-                    //          </Button>
-                            
-                    //         <Button sx={{color:'white'}} variant='outlined' ><Link style={{fontSize:'0.8rem'}} to={project.git_url} target='_blank'
-                    //         rel='noopener noreferer'>Git Repo</Link> </Button>
-                    //     </div> 
-                        
-                    // </div>
-                )
-            })
-        }
+        <div className="card-container">
+        {projects.map((project, index) => {
+            return (
+            <div key={index} ref={addToProjectRefs}>
+                <MediaCard
+                data={project}
+                handleToggle={handleToggle}
+                link={link}
+                />
+            </div>
+            );
+        })}
         </div>
+
         <Dialog open={isOpen} onClose={handleClose} aria-label='alert-dialog'>
             <DialogTitle sx={{display:'flex', margin: '0 auto'}}>
             <WarningIcon color='error' fontSize='large' />

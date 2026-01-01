@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactWhatsapp from 'react-whatsapp';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import My from '../Assets/Statics/Images/my.png'
 

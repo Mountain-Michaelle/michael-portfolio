@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import '../Assets/CSS/Footer.scss';
 import lets from '../Assets/Statics/Images/lets.png';
-import { Box, Button, Modal, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import SocialContact from './SocialContact';
 import Message from './Message';
 import Copyright from './CopyWrite';
+
+
 const Footer = () => {
 
   const [isOpen, setIsOpen] = useState(false)

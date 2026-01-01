@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import '../Assets/CSS/Header.scss';
 import my from '../Assets/Statics/Images/my.png'
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import Types from './Types';
 import SocialContact from './SocialContact';
-import gsap, {CSSPlugin} from "gsap";
+import gsap from "gsap";
 // import { CSSRulePlugin } from "@gsap/react";
 
 
