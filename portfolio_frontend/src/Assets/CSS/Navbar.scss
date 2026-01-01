@@ -45,6 +45,14 @@
         gap: 1rem;
         margin-top: 3rem;
 
+        .MuiButtonBase-root{  
+        text-transform: capitalize;              
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 17px;
+        color: rgb(56, 0, 48);
+        };
+
         &:hover{
             cursor: pointer;
         }
@@ -87,10 +95,18 @@
        bottom: 0%;
        right: 0;
        transition: all .3s;
-       gap: 1rem;
-       padding: 20px;
+       gap: 0.1rem;
+       padding: 10px;
        transform: translateY(100%);
        z-index: 10;
+
+       .MuiButtonBase-root{  
+        text-transform: capitalize;              
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 17px;
+        color: rgb(255, 98, 0);
+        };
 
        a{
         margin-left: 2rem;
@@ -134,7 +150,4 @@
             transform: translateY(-100%);
         }
 
-        .blank{
-           
-    }
 }

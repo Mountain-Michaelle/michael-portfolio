@@ -8,7 +8,7 @@ import Psd from '../Statics/SkillIcons/Psd.png'
 import Mui from '../Statics/SkillIcons/Mui.png'
 import Fastapi from '../Statics/SkillIcons/fastapi.png'
 import Typescript from '../Statics/SkillIcons/typescript.png'
-import Nextjs from '../Statics/SkillIcons/next.png'
+import Next from '../Statics/SkillIcons/next.png'
 
 
 export default [
@@ -18,7 +18,7 @@ export default [
     },
      {
         Name: 'Nextjs',
-        Image: Nextjs,
+        Image: Next,
     },
     {
         Name: 'Django(DRF)',

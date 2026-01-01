@@ -48,7 +48,13 @@
             border-radius: 50%;
             overflow: hidden;
             transform: scaleY(100%);
-            animation: BounceDown 1.5s forwards ease-in-out;
+            animation:BounceDown 1.5s ease-in-out forwards,
+            FlameGlow 3s ease-in-out infinite;
+            animation-delay:
+            0s,
+            1.7s;
+            will-change: box-shadow;
+
 
             img{
                 width: 280px;
@@ -143,3 +149,51 @@
         opacity: 1;
     }
 }
+
+@keyframes FlameGlow {
+
+    0% {
+        box-shadow:
+            0 0 8px rgba(255, 140, 0, 0.3),
+            0 0 20px rgba(255, 80, 0, 0.2),
+            0 0 35px rgba(255, 115, 0, 0.15);
+        }1% {
+            box-shadow:
+                0 0 8px rgba(255, 94, 0, 0.3),
+                0 0 20px rgba(255, 80, 0, 0.2),
+                0 0 35px rgba(255, 149, 0, 0.15);
+            }
+        
+        3% {
+            box-shadow:
+                0 0 8px rgba(255, 140, 0, 0.3),
+                0 0 20px rgba(255, 80, 0, 0.2),
+                0 0 35px rgba(255, 149, 0, 0.15);
+            }
+        5% {
+    box-shadow:
+        0 0 8px rgba(255, 140, 0, 0.3),
+        0 0 20px rgba(255, 80, 0, 0.2),
+        0 0 35px rgba(255, 149, 0, 0.15);
+    }
+  
+    10% {
+      box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.393);
+    }
+  
+    50% {
+      box-shadow:
+        0 0 18px rgba(255, 140, 0, 0.6),
+        0 0 40px rgba(255, 80, 0, 0.45),
+        0 0 65px rgba(255, 221, 0, 0.243);
+    }
+  
+    100% {
+      box-shadow:
+        0 0 12px rgba(255, 140, 0, 0.45),
+        0 0 28px rgba(255, 80, 0, 0.35),
+        0 0 50px rgba(255, 220, 0, 0.3);
+    }
+  }
+  

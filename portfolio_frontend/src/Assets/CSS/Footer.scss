@@ -29,15 +29,26 @@
             width: 100%;
         }
 
-        .MuiBox-root{
-            .align-social{
-                margin-left: -7rem;
+    .MuiBox-root{
+        .align-social{
+            margin-left: -7rem;
 
-                @include medium{
-                    margin-left: 0;
-                }
-            }
+            @include medium{
+                margin-left: 0;
+            }              
+        }           
+    }
+        
+    .msg-contact{
+        @include medium{
+            display: flex;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
         }
+                }
     }
 
     .right{

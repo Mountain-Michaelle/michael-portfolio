@@ -22,11 +22,12 @@ const Footer = () => {
   return (
     <div className='footer' style={{position: 'relative'}}>
         <div className='left'>
-          <Box sx={{width: '100%', }}>
-          <Typography variant='h5'>E-mail, let's talk!</Typography>
-            <Button onClick={handleIsOpen} variant='outlined' color='warning' sx={{margin:"10px"}}>Message Me</Button>
+          <div className="msg-contact" style={{width: '100%', }}>
+          <Typography id="contact" variant='h5'>Reach out let's talk!</Typography>
+            <Button onClick={handleIsOpen} variant='outlined' color='warning' 
+            sx={{margin:"10px", fontWeight:450, padding:"10px", paddingRight:"20px", paddingLeft:"20px", fontSize:"20px"}}>Message Me</Button>
             <Message isOpen={isOpen} isClose={handleClose} />
-          </Box>
+          </div>
 
           <Box sx={{width:'100%', display: 'flex', flexDirection:'column', gap:'1rem'}}>
             {/* <Typography variant='h6'>Social Handles</Typography> */}
@@ -37,7 +38,7 @@ const Footer = () => {
          
         </div>
 
-        <div className='right' style={{height: '100%'}}>
+        <div  className='right' style={{height: '100%'}}>
           <Box sx={{width:'100%', display:'flex', flexFlow: 'wrap column',
           position: 'absolute', top: '0', right:'2', width:'600px', zIndex:'100', marginTop:'-3rem',
           margin: '1rem' }} >
