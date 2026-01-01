@@ -24,27 +24,42 @@ const Navbar = () => {
 
   const scrollToContact = (link) => {
     closeMenu();
-
-    // If already on home page
-    if (link?.includes("#") && location.pathname === "/") {
-      document.getElementById("contact")?.scrollIntoView({
-        behavior: "smooth",
+  
+    // Guard: invalid or missing link
+    if (typeof link !== "string") return;
+  
+    const isHashLink = link.startsWith("#");
+    const isHome = location.pathname === "/";
+  
+    const scroll = () => {
+      const el = document.getElementById("contact");
+      if (!el) return;
+  
+      el.scrollIntoView({ behavior: "smooth" });
+    };
+  
+    // Same page hash scroll
+    if (isHashLink && isHome) {
+      requestAnimationFrame(scroll);
+      return;
+    }
+  
+    // Different route → home → scroll
+    if (isHashLink && !isHome) {
+      navigate("/", { replace: false });
+  
+      // Wait for DOM to be ready
+      requestAnimationFrame(() => {
+        requestAnimationFrame(scroll);
       });
-      return
+  
+      return;
     }
-    if (link?.includes("#") && location.pathname != "/" ){
-      // Navigate first, then scroll
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }, 100);
-      return 
-    }
-
-    navigate(link)
+  
+    // Normal navigation
+    navigate(link);
   };
+  
 
   return (
      <div className='nav'>

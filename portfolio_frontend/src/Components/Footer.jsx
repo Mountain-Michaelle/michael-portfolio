@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div  className='right' style={{height: '100%'}}>
           <Box sx={{width:'100%', display:'flex', flexFlow: 'wrap column',
-          position: 'absolute', top: '0', right:'2', width:'600px', zIndex:'100', marginTop:'-3rem',
+          position: 'absolute', top: '0', right:'2', zIndex:'100', marginTop:'-3rem',
           margin: '1rem' }} >
           </Box>
           <Box sx={{width:'100%'}}>

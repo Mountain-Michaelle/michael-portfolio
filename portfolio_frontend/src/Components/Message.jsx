@@ -1,19 +1,13 @@
 import React, {useState} from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Modal } from '@mui/material';
-import formik from 'formik';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -47,8 +41,6 @@ export default function Message({isOpen, isClose}) {
       subject: Yup.string().required("Please add a message").max(150, "Message length too much")
   })
 
-  const BASE_URL = 'http://127.0.0.1:8000'
-
   const config = {
     'headers':{
       'content-type': 'application/json',
@@ -70,7 +62,7 @@ export default function Message({isOpen, isClose}) {
       setLoading(true)
       try{
         await axios.post('https://re-estate-backend.vercel.app/contacts/', body, config)
-        .then(res => {
+        .then(_ => {
           setSuccess(true)
           setLoading(false)
           setError('')
@@ -82,15 +74,13 @@ export default function Message({isOpen, isClose}) {
           setSuccess(false)
         })
     }
-    catch(error){
-      console.log(error)
+    catch{
+      // console.log(error)
     }
   }
 })
 
   const {name, email, phone, message} = formik.values
-
-  console.log(error)
 
   return (
     <Modal

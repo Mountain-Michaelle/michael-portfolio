@@ -25,7 +25,7 @@ const Header = () => {
         <div className='my'>
 
         <div ref={revealRef} className='circle'>
-            <img src={my} alt='Profile Picture' />
+            <img src={my} alt='Profile circle' />
         </div>
         
         <div className='my-profile'>
