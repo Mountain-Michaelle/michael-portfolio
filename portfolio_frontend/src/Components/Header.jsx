@@ -25,7 +25,7 @@ const Header = () => {
         <div className='my'>
 
         <div ref={revealRef} className='circle'>
-            <img src={my} alt='Profile circle' />
+            <img src={my} alt='Ugwu Michael Chinemelu, Fullstack developer' />
         </div>
         
         <div className='my-profile'>
