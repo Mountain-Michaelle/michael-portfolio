@@ -1,30 +1,21 @@
-import React from 'react'
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import { Viewer, Worker } from '@react-pdf-viewer/core';
-import '../Assets/CSS/PDFViewer.scss';
-const url = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;
+import React from "react";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import "../Assets/CSS/PDFViewer.scss";
 
+const workerUrl =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
 
-const PDFViewer = ({pdfUrl}) => {
+const PDFViewer = ({ pdfUrl }) => {
+  if (!pdfUrl) return null;
 
-try{
-
-  return (  
-    <div style={{ height: '100vh', background:'#09000c'}} className='pdf-viewer'>
-
-      <Worker workerUrl={url} style={{background:'black'}}>
-        <Viewer fileUrl={pdfUrl}/>
+  return (
+    <div className="pdf-viewer" style={{ height: "100vh", background: "#09000c" }}>
+      <Worker workerUrl={workerUrl}>
+        <Viewer fileUrl={pdfUrl} />
       </Worker>
-
     </div>
-  )
-  }
-catch(error){
-  console.log(error)
-}
-
-}
-
-
+  );
+};
 
 export default PDFViewer;
