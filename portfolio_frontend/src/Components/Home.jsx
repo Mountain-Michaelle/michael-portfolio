@@ -11,15 +11,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const html = `
-    <p>I am <strong>Michael Chinemelu</strong>, a full-stack developer focused on building scalable, user-centric digital solutions with modern technologies.</p>
+  const html = `<p style="text-align:justify">I am&nbsp;<strong><span data-darkreader-inline-color="" 
+   style="--darkreader-inline-color:var(--darkreader-text-f39c12, #ffcd3b); color:#f39c12">Michael Chinemelu</span>,
+   </strong>&nbsp;a full-stack developer turning ideas into sleek, user-friendly digital products.
+    I love building things that are both functional and fun.</p>
 
-    <p>I primarily work with <strong>Django (DRF), FastAPI</strong>, and frontend frameworks such as <strong>React, Vue, and Next.js</strong>, delivering performant applications with clean architecture.</p>
+  <p style="text-align:justify">I work with&nbsp;<strong><span data-darkreader-inline-bgcolor="" 
+  style="--darkreader-inline-bgcolor:var(--darkreader-background-f39c12, #e29110); background-color:#f39c12">Django (DRF)</span>, 
+  <span data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor:var(--darkreader-background-f39c12, #e29110);
+   background-color:#f39c12">FastAPI</span>,</strong> and frontend frameworks like&nbsp;<strong><span><span>
+   <span data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor:var(--darkreader-background-f39c12, #e29110);
+    background-color:#f39c12">React</span></span></span>, <span data-darkreader-inline-bgcolor="" 
+    style="--darkreader-inline-bgcolor:var(--darkreader-background-f39c12, #e29110); background-color:#f39c12">Vue</span>, and <span data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor:var(--darkreader-background-f39c12, #e29110);
+    background-color:#f39c12">Next.js</span></strong>, building robust backends and smooth, interactive interfaces.</p> 
 
-    <hr style="margin-top:10px" />
+  <hr style="margin-top:10px" />
 
-    <p>I hold a degree in <strong>Computer Science</strong> from the <strong>University of Nigeria, Nsukka</strong> and enjoy solving real-world problems through technology.</p>
-  `;
+  <p style="text-align:justify">I hold a degree in<span data-darkreader-inline-color="" style="--darkreader-inline-color:var(--darkreader-text-f39c12, #ffcd3b); color:#f39c12"> Computer Science</span> from&nbsp;<strong>the<span data-darkreader-inline-color="" style="--darkreader-inline-color:var(--darkreader-text-f39c12, #ffcd3b); color:#f39c12"> University of Nigeria, Nsukka</span></strong>. I enjoy using technology to solve real-world problems and create meaningful experiences.</p>`;
+
 
   const serviceCardsRef = useRef([]);
   serviceCardsRef.current = [];
